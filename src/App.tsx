@@ -55,7 +55,8 @@ export default class App extends React.Component<{},IState> {
     this.apiEndpoint = "https://api.opendota.com/api/heroes";
   }
 
-  // Start getting info from the API before the webpage full loads
+  // Start getting info from the API before the webpage fully loads
+  // Called the first time the component is loaded right before the component is added to the page
   public componentWillMount() {
     request.get(this.apiEndpoint, (error , response) => {
       if(error) {
