@@ -6,6 +6,7 @@ import './App.css';
 
 
 
+// GIT HUB TESTING CYKA
 interface IDotaHero {
   attack_type: string,
   id: number,
@@ -26,7 +27,7 @@ interface IState {
   heroImg: string
 }
 
-
+// Created kind-of enums to change the output, as API gives agi,str,int.
 const attributeEnum = {
   "agi": "Agility",
   "int": "Intelligence",
@@ -79,7 +80,7 @@ export default class App extends React.Component<{},IState> {
       for (const key in this.heroList) {
         // When this ensures that the user must enter the right name. 
         if(this.heroList[key].localized_name.toLowerCase()===this.state.searchedVal.toLowerCase()) {
-          const imgName = this.heroList[key].localized_name.toLowerCase().replace(" ", "_").replace("-","");
+          const imgName = this.heroList[key].localized_name.toLowerCase().replace(" ", "_").replace("-","").replace("necrophos", "necrolyte");
           this.setState({
             heroImg: "http://cdn.dota2.com/apps/dota2/images/heroes/"+imgName+"_full.png",
             searchedHero: this.heroList[key],
