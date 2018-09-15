@@ -6,7 +6,6 @@ import './App.css';
 
 
 
-// GIT HUB TESTING CYKA
 interface IDotaHero {
   attack_type: string,
   id: number,
