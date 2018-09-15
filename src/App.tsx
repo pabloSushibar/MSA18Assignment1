@@ -56,7 +56,7 @@ export default class App extends React.Component<{},IState> {
   }
 
   // Start getting info from the API before the webpage full loads
-  public componentDidMount() {
+  public componentWillMount() {
     request.get(this.apiEndpoint, (error , response) => {
       if(error) {
         // tslint:disable-next-line:no-console
